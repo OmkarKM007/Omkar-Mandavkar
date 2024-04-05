@@ -1,0 +1,18 @@
+import matplotlib.pyplot as plt
+
+ls1 = []
+ls2 = []
+l1, = plt.plot([])
+l2, = plt.plot([])
+
+while True:
+    (some computation to get, in every iteration, 2 new values: ls1_new and ls2_new)
+
+    ls1.append(ls1_new)
+    ls2.append(ls2_new)
+
+    l1.set_data(range(50),ls1[50:])
+    l2.set_data(range(50),ls2[50:])
+
+    plt.draw()
+    plt.pause(0.0001)
